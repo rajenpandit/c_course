@@ -3,7 +3,7 @@
 #define ABC 10
 
 // libc.so 
-// source code -> Preprocessor -> compiler -> ObjectCode -> Linker -> Executable
+// source code -> Preprocessor -> compiler->asm -> ObjectCode -> Linker -> Executable
 
 int main() {
 
