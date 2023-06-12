@@ -42,3 +42,6 @@ void swap_adjacent(int* arr, int length) {
     swap_adjacent_v2(array, length);
     print_array(array, length);
  }  
+
+
+
