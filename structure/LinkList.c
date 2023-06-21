@@ -7,6 +7,17 @@ struct Node {
 
 typedef struct Node Node;  // typedef <oldTypeName> <newTypeName>
 
+
+// Linked list traversal
+void print_nodes(Node* temp){
+    while(temp != NULL) {
+        printf("%d ", temp->data);
+        // printf("%d ", (*temp).data); 
+        temp = temp->p;
+    }
+    printf("\n");
+}
+
 int main(){
     Node node1;
     Node node2;
@@ -40,12 +51,23 @@ int main(){
     printf("%d\n", node1.p->p->data);  // node3.data
     printf("%d\n", node1.p->p->p->data); // node4.data
 
-    printf("______________________________________\n");   
-    Node* temp = &node1;
-    while(temp != NULL) {
-        printf("%d ", temp->data);
-        // printf("%d ", (*temp).data); 
-        temp = temp->p;
+    printf("______________________________________\n"); 
+    printf("Enter number for nodes required:");
+    int n;
+    scanf("%d",&n);
+    Node* last_node = node4.p;
+    for(int i=0; i<n; i++){
+        int value;
+        last_node->p = malloc(sizeof(Node));
+        last_node = last_node->p;
+        printf("Enter the value:");
+        scanf("%d", &value);
+        last_node->data = value;
     }
-    printf("\n");
+    print_nodes(&node1);
+
+    
 }
+
+
+/// 1. find the given value in the linked list.
